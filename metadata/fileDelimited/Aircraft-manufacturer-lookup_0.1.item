@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_d146IIyPEe6XyvTEjdUXMQ" name="Aircraft-manufacturer-lookup" dataPackage="_d146IYyPEe6XyvTEjdUXMQ" Server="Localhost 127.0.0.1" FilePath="/Users/herrertj/Library/CloudStorage/WorkDocsDrive-Documents/fib/dw/project/etl/ACMEFLYINGUSECASE/input/aircraft-manufaturerinfo-lookup.csv" Encoding="UTF-8" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FooterValue="0" LimitValue="" FirstLineCaption="true" EscapeType="CSV" EscapeChar="&quot;\&quot;&quot;" TextEnclosure="&quot;\&quot;&quot;" CsvOption="true" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_d146IYyPEe6XyvTEjdUXMQ" name="default" dataManager="_d146IIyPEe6XyvTEjdUXMQ">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_d146IoyPEe6XyvTEjdUXMQ" id="_E1btYIyPEe6XyvTEjdUXMQ" label="Aircraft-manufacturer-lookup">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_d146I4yPEe6XyvTEjdUXMQ" label="aircraft_reg_code" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_d146JIyPEe6XyvTEjdUXMQ" label="manufacturer_serial_number" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_d146JYyPEe6XyvTEjdUXMQ" label="aircraft_model" length="14" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_d146JoyPEe6XyvTEjdUXMQ" label="manufacturer" length="6" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

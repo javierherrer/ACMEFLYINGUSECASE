@@ -1,0 +1,24 @@
+[ {
+  "baseItem" : {
+    "id" : "_EN5PkIiaEe6FztH2UosZ9Q",
+    "version" : "0.1",
+    "type" : "job"
+  },
+  "relatedItems" : [ {
+    "id" : "_17ZaUIiZEe6FztH2UosZ9Q",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_5DE80IySEe6XyvTEjdUXMQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_d13E8IyPEe6XyvTEjdUXMQ",
+    "version" : "Latest",
+    "type" : "property"
+  }, {
+    "id" : "_d13E8IyPEe6XyvTEjdUXMQ - Aircraft-manufacturer-lookup",
+    "version" : "Latest",
+    "type" : "schema"
+  } ]
+} ]

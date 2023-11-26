@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_bB7n8IyTEe6XyvTEjdUXMQ" name="Oracle-output" id="_5DE80IySEe6XyvTEjdUXMQ" label="Oracle-output" dataPackage="_7xUnkIyZEe6XyvTEjdUXMQ" DatabaseType="Oracle with service name" DriverClass="oracle.jdbc.OracleDriver" URL="jdbc:oracle:thin:@(description=(address=(protocol=tcp)(host=oraclefib.fib.upc.edu)(port=1521))(connect_data=(service_name=orabd)))" dbVersionString="ORACLE_18" Port="1521" Username="javier.herrer.torres" Password="enc:system.encryption.key.v1:/s2gVEAvB5D37PxmmpNMyG285WB7jltqRl1mzvwYgaHpJD9W" ServerName="oraclefib.fib.upc.edu" DatasourceName="" FileFieldName="" SID="orabd" SqlSynthax="" StringQuote="" NullChar="" DbmsId="oracle_id" ProductId="ORACLE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="\&quot;JAVIER.HERRER.TORRES\&quot;">
+    <taggedValue xmi:id="_bB8PAIyTEe6XyvTEjdUXMQ" tag="Is Conn Need Reload" value="true"/>
+    <taggedValue xmi:id="_bCPxAIyTEe6XyvTEjdUXMQ" tag="package filter" value=""/>
+    <taggedValue xmi:id="_bCS0UIyTEe6XyvTEjdUXMQ" tag="Status" value=""/>
+    <taggedValue xmi:id="_bCS0UYyTEe6XyvTEjdUXMQ" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_bCS0UoyTEe6XyvTEjdUXMQ" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_bCS0U4yTEe6XyvTEjdUXMQ" tag="Description" value=""/>
+    <taggedValue xmi:id="_bCS0VIyTEe6XyvTEjdUXMQ" tag="Author" value=""/>
+    <taggedValue xmi:id="_bCS0VYyTEe6XyvTEjdUXMQ" tag="otherParameter"/>
+    <taggedValue xmi:id="_bJqnoIyTEe6XyvTEjdUXMQ" tag="DB ProductName" value="Oracle"/>
+    <taggedValue xmi:id="_bJqnoYyTEe6XyvTEjdUXMQ" tag="DB ProductVersion" value="Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production&#xA;With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options"/>
+    <taggedValue xmi:id="_bJqnooyTEe6XyvTEjdUXMQ" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_bB8PAYyTEe6XyvTEjdUXMQ" key="CONN_PARA_KEY_USERNAME" value="javier.herrer.torres"/>
+    <parameters xmi:id="_HfU8QIyZEe6XyvTEjdUXMQ" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_7xUnkIyZEe6XyvTEjdUXMQ" name="\&quot;JAVIER.HERRER.TORRES\&quot;" dataManager="_bB7n8IyTEe6XyvTEjdUXMQ"/>
+</xmi:XMI>
