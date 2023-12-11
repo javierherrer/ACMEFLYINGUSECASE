@@ -45,7 +45,11 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+<<<<<<< HEAD
     <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:PzMLqXvFQ89mcaHw/PfQbtYepO5dbDnwDByZFSEq" show="false"/>
+=======
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:gH+DnjX6gbDRsST9nys38gLUYgIEyV/2nKyJVjQJ" show="false"/>
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -80,7 +84,11 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+<<<<<<< HEAD
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:JnXBQothw+LxfPrl63qbX/O5qbhdJkVAWNuHOQDb" show="false"/>
+=======
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:WQ+8rCz0wE7UjdCuJPOjDarkdMCPyRrU//wfuNCj" show="false"/>
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -122,7 +130,11 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;AMOS&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;javier.herrer.torres&quot;"/>
+<<<<<<< HEAD
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:HM+hYf6huIp0LiT7hRS00u+aXH2Q0JIpbB9p91NvRHoNTUlBG7E="/>
+=======
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:RTok1YTydZ/Eys88pEZiYV0iNLlbQK5ARbTufKHCFsHzWBoWxHA="/>
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;TechnicalLogBookOrders&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -285,7 +297,11 @@
     <elementParameter field="TEXT" name="DBNAME" value="&quot;AMOS&quot;"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;javier.herrer.torres&quot;"/>
+<<<<<<< HEAD
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:nRArn7xvMKo8j+fL4WEMDA/SBi0F1AH0+anhekewFwj63BonT98="/>
+=======
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ECeSJ9AI3vBH2NBMdIaR0K+SjX8QY9RoGMDGDsM5NwkGi+eCkpI="/>
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;WorkPackages&quot;"/>
     <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
     <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
@@ -404,9 +420,15 @@
     <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;orabd&quot;" show="false"/>
     <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;\&quot;JAVIER.HERRER.TORRES\&quot;&quot;"/>
     <elementParameter field="TEXT" name="USER" value="&quot;javier.herrer.torres&quot;"/>
+<<<<<<< HEAD
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:1X0/dCwtRI7bMjS6XaSsNz/wDRCaY63TpBJYKAhdgYJTOzr9Ees="/>
     <elementParameter field="DBTABLE" name="TABLE" value="&quot;LogBookReporting&quot;"/>
     <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="CREATE_IF_NOT_EXISTS"/>
+=======
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:v/90hAjrx05hKWI5o2P02X4ZCRgjzs2BU6PIWSts6NKTqKZLSw4="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;LogBookReporting&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_CREATE"/>
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
     <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete" show="false"/>
     <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
     <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>

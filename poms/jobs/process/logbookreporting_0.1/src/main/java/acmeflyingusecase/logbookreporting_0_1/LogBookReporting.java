@@ -74,6 +74,11 @@ public class LogBookReporting implements TalendJob {
 		this.valueObject = valueObject;
 	}
 
+<<<<<<< HEAD
+=======
+	private Object[] multiThreadLockWrite = new Object[0];
+
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 	private final static String defaultCharset = java.nio.charset.Charset.defaultCharset().name();
 
 	private final static String utf8Charset = "UTF-8";
@@ -143,6 +148,7 @@ public class LogBookReporting implements TalendJob {
 	public Integer errorCode = null;
 	private String currentComponent = "";
 
+<<<<<<< HEAD
 	private final java.util.Map<String, Object> globalMap = new java.util.HashMap<String, Object>();
 	private final static java.util.Map<String, Object> junitGlobalMap = new java.util.HashMap<String, Object>();
 
@@ -150,6 +156,19 @@ public class LogBookReporting implements TalendJob {
 	private final java.util.Map<String, Long> end_Hash = new java.util.HashMap<String, Long>();
 	private final java.util.Map<String, Boolean> ok_Hash = new java.util.HashMap<String, Boolean>();
 	public final java.util.List<String[]> globalBuffer = new java.util.ArrayList<String[]>();
+=======
+	private final java.util.Map<String, Object> globalMap = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Object>());
+
+	private final java.util.Map<String, Long> start_Hash = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Long>());
+	private final java.util.Map<String, Long> end_Hash = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Long>());
+	private final java.util.Map<String, Boolean> ok_Hash = java.util.Collections
+			.synchronizedMap(new java.util.HashMap<String, Boolean>());
+	public final java.util.List<String[]> globalBuffer = java.util.Collections
+			.synchronizedList(new java.util.ArrayList<String[]>());
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 	private RunStat runStat = new RunStat();
 
@@ -289,7 +308,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -299,7 +322,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -309,7 +336,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -319,7 +350,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -329,7 +364,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -339,7 +378,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -349,7 +392,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -359,7 +406,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -369,7 +420,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -379,7 +434,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_2_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -396,7 +455,11 @@ public class LogBookReporting implements TalendJob {
 
 		end_Hash.put(errorComponent, System.currentTimeMillis());
 
+<<<<<<< HEAD
 		status = "failure";
+=======
+		((java.util.Map) threadLocal.get()).put("status", "failure");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 		tDBInput_4_onSubJobError(exception, errorComponent, globalMap);
 	}
@@ -1062,7 +1125,11 @@ public class LogBookReporting implements TalendJob {
 				String dbUser_tDBInput_2 = "javier.herrer.torres";
 
 				final String decryptedPassword_tDBInput_2 = routines.system.PasswordEncryptUtil.decryptPassword(
+<<<<<<< HEAD
 						"enc:routine.encryption.key.v1:HLVDsvTEjKiH7UHU6fQzHLewwfxX4C00HuJ364OjoORfJpBK");
+=======
+						"enc:routine.encryption.key.v1:EfmbUaf9rAN+SzAcgGH0plx+ZG5UZRTBF7JP2gYfkVyIGlJb");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 				String dbPwd_tDBInput_2 = decryptedPassword_tDBInput_2;
 
@@ -4537,7 +4604,11 @@ public class LogBookReporting implements TalendJob {
 				String dbUser_tDBInput_4 = "javier.herrer.torres";
 
 				final String decryptedPassword_tDBInput_4 = routines.system.PasswordEncryptUtil.decryptPassword(
+<<<<<<< HEAD
 						"enc:routine.encryption.key.v1:Ar6jiNfand8SiK/yJhc/nRV2ibT5HFsK+WHv/oqGLaQd2xP8");
+=======
+						"enc:routine.encryption.key.v1:2fFAue0xb79k3Bb+ugv1hJuBbWrjPYB0U/9Kse0DJY2Fy67Z");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 				String dbPwd_tDBInput_4 = decryptedPassword_tDBInput_4;
 
@@ -5178,7 +5249,11 @@ public class LogBookReporting implements TalendJob {
 				String dbUser_tDBOutput_1 = "javier.herrer.torres";
 
 				final String decryptedPassword_tDBOutput_1 = routines.system.PasswordEncryptUtil.decryptPassword(
+<<<<<<< HEAD
 						"enc:routine.encryption.key.v1:DG8dY10TcLGDjQi+UGwN1k4DGpksU8yehCH2UeFMYJSJOYJC");
+=======
+						"enc:routine.encryption.key.v1:0UAH1JWQjBHiKZdQKoaTEDx7CBYGgb/EuvFnF6hTMVdoKDDW");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 
 				String dbPwd_tDBOutput_1 = decryptedPassword_tDBOutput_1;
 				dbschema_tDBOutput_1 = "\"JAVIER.HERRER.TORRES\"";
@@ -5196,6 +5271,7 @@ public class LogBookReporting implements TalendJob {
 				} else {
 					tableName_tDBOutput_1 = dbschema_tDBOutput_1 + "." + ("LogBookReporting");
 				}
+<<<<<<< HEAD
 				String tableNameForSearch_tDBOutput_1 = "" + ((String) "LogBookReporting") + "";
 				String dbschemaForSearch_tDBOutput_1 = null;
 				if (dbschema_tDBOutput_1 == null || dbschema_tDBOutput_1.trim().length() == 0) {
@@ -5223,6 +5299,14 @@ public class LogBookReporting implements TalendJob {
 						stmtCreate_tDBOutput_1.execute("CREATE TABLE " + tableName_tDBOutput_1
 								+ "(aircraftid CHAR(6)   not null ,monthid CHAR(7)   not null ,personid CHAR(6)   not null ,counter NUMBER(2,0)   not null ,primary key(aircraftid,monthid,personid))");
 					}
+=======
+				try (java.sql.Statement stmtDrop_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
+					stmtDrop_tDBOutput_1.execute("DROP TABLE " + tableName_tDBOutput_1 + "");
+				}
+				try (java.sql.Statement stmtCreate_tDBOutput_1 = conn_tDBOutput_1.createStatement()) {
+					stmtCreate_tDBOutput_1.execute("CREATE TABLE " + tableName_tDBOutput_1
+							+ "(aircraftid CHAR(6)   not null ,monthid CHAR(7)   not null ,personid CHAR(6)   not null ,counter NUMBER(2,0)   not null ,primary key(aircraftid,monthid,personid))");
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 				}
 				java.sql.PreparedStatement pstmt_tDBOutput_1 = conn_tDBOutput_1
 						.prepareStatement("SELECT COUNT(1) FROM " + tableName_tDBOutput_1
@@ -5793,6 +5877,23 @@ public class LogBookReporting implements TalendJob {
 		};
 	};
 
+<<<<<<< HEAD
+=======
+	private SyncInt runningThreadCount = new SyncInt();
+
+	private class SyncInt {
+		private int count = 0;
+
+		public synchronized void add(int i) {
+			count += i;
+		}
+
+		public synchronized int getCount() {
+			return count;
+		}
+	}
+
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 	protected PropertiesWithType context_param = new PropertiesWithType();
 	public java.util.Map<String, Object> parentContextMap = new java.util.HashMap<String, Object>();
 
@@ -5960,6 +6061,7 @@ public class LogBookReporting implements TalendJob {
 		this.globalResumeTicket = true;// to run tPreJob
 
 		this.globalResumeTicket = false;// to run others jobs
+<<<<<<< HEAD
 
 		try {
 			errorCode = null;
@@ -5972,6 +6074,67 @@ public class LogBookReporting implements TalendJob {
 
 			e_tDBInput_4.printStackTrace();
 
+=======
+		final Thread launchingThread = Thread.currentThread();
+		runningThreadCount.add(1);
+		new Thread() {
+			public void run() {
+				java.util.Map threadRunResultMap = new java.util.HashMap();
+				threadRunResultMap.put("errorCode", null);
+				threadRunResultMap.put("status", "");
+				threadLocal.set(threadRunResultMap);
+
+				try {
+					((java.util.Map) threadLocal.get()).put("errorCode", null);
+					tDBInput_4Process(globalMap);
+					if (!"failure".equals(((java.util.Map) threadLocal.get()).get("status"))) {
+						((java.util.Map) threadLocal.get()).put("status", "end");
+					}
+				} catch (TalendException e_tDBInput_4) {
+					globalMap.put("tDBInput_4_SUBPROCESS_STATE", -1);
+
+					e_tDBInput_4.printStackTrace();
+
+				} catch (java.lang.Error e_tDBInput_4) {
+					globalMap.put("tDBInput_4_SUBPROCESS_STATE", -1);
+					((java.util.Map) threadLocal.get()).put("status", "failure");
+					throw e_tDBInput_4;
+
+				} finally {
+					Integer localErrorCode = (Integer) (((java.util.Map) threadLocal.get()).get("errorCode"));
+					String localStatus = (String) (((java.util.Map) threadLocal.get()).get("status"));
+					if (localErrorCode != null) {
+						if (errorCode == null || localErrorCode.compareTo(errorCode) > 0) {
+							errorCode = localErrorCode;
+						}
+					}
+					if (!status.equals("failure")) {
+						status = localStatus;
+					}
+
+					if ("true".equals(((java.util.Map) threadLocal.get()).get("JobInterrupted"))) {
+						launchingThread.interrupt();
+					}
+
+					runningThreadCount.add(-1);
+				}
+			}
+		}.start();
+
+		boolean interrupted = false;
+		while (runningThreadCount.getCount() > 0) {
+			try {
+				Thread.sleep(10);
+			} catch (java.lang.InterruptedException e) {
+				interrupted = true;
+			} catch (java.lang.Exception e) {
+				e.printStackTrace();
+			}
+		}
+
+		if (interrupted) {
+			Thread.currentThread().interrupt();
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 		}
 
 		this.globalResumeTicket = true;// to run tPostJob
@@ -5994,6 +6157,20 @@ public class LogBookReporting implements TalendJob {
 		}
 		int returnCode = 0;
 
+<<<<<<< HEAD
+=======
+		Integer localErrorCode = (Integer) (((java.util.Map) threadLocal.get()).get("errorCode"));
+		String localStatus = (String) (((java.util.Map) threadLocal.get()).get("status"));
+		if (localErrorCode != null) {
+			if (errorCode == null || localErrorCode.compareTo(errorCode) > 0) {
+				errorCode = localErrorCode;
+			}
+		}
+		if (localStatus != null && !status.equals("failure")) {
+			status = localStatus;
+		}
+
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
 		if (errorCode == null) {
 			returnCode = status != null && status.equals("failure") ? 1 : 0;
 		} else {
@@ -6126,6 +6303,11 @@ public class LogBookReporting implements TalendJob {
 	ResumeUtil resumeUtil = null;
 }
 /************************************************************************************************
+<<<<<<< HEAD
  * 165239 characters generated by Talend Open Studio for Data Integration on the
  * December 11, 2023, 10:24:09 AM CET
+=======
+ * 167198 characters generated by Talend Open Studio for Data Integration on the
+ * December 11, 2023, 7:12:31 PM CET
+>>>>>>> b20ed64 (feat: logbookreporting and aircraftdimension)
  ************************************************************************************************/
