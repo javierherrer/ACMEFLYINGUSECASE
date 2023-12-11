@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_RbJpEJgGEe6DXooC18dazA" name="Airbus_master" dataPackage="_RbJpEZgGEe6DXooC18dazA" Server="Localhost 127.0.0.1" FilePath="/Users/herrertj/Library/CloudStorage/WorkDocsDrive-Documents/fib/dw/project/etl/talend-workspace/ACMEFLYINGUSECASE/input/aircraft_airbus_master.csv" Encoding="ISO-8859-15" FieldSeparatorValue="&quot;,&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FooterValue="0" LimitValue="" FirstLineCaption="true" RemoveEmptyRow="true" EscapeChar="&quot;\&quot;&quot;" TextEnclosure="&quot;\&quot;&quot;" FieldSeparatorType="Comma"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_RbJpEZgGEe6DXooC18dazA" name="default" dataManager="_RbJpEJgGEe6DXooC18dazA">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_RbJpEpgGEe6DXooC18dazA" id="_ELJLkJgGEe6DXooC18dazA" label="metadata">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RbJpE5gGEe6DXooC18dazA" label="manufacturer_serial_number" length="8" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RbJpFJgGEe6DXooC18dazA" label="aircraft_model" length="100" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

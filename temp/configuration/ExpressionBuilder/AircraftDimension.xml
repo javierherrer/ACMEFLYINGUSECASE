@@ -1,0 +1,11 @@
+<?xml version="1.1" encoding="UTF-8"?>
+<expression:EMFExpression xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:expression="http:///expression.ecore" id="tMap_2=>" expression="Relational.ISNULL(row8.model) || row8.model.equals(&quot;&quot;) ) ? row10.aircraft_model : row8.model">
+  <variables name="row8.ID" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row8.model" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row8.manufacturer" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row8.manufacturer_serial_number" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row10.manufacturer_serial_number" value="null" talendType="id_String" nullable="true"/>
+  <variables name="row10.aircraft_model" value="null" talendType="id_Integer" nullable="true"/>
+  <variables name="row10.Aircraft_manufacturer_serial_number" value="null" talendType="id_String" nullable="true"/>
+  <variables name="Relational.ISNULL(row8.Aircraft_aircraft_model) || row8.Aircraft_aircraft_model.equals(&quot;&quot;) ) ? row10.aircraft_model : row8.Aircraft_aircraft_model " value="null" talendType="id_String"/>
+</expression:EMFExpression>
