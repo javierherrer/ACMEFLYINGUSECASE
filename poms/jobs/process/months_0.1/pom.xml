@@ -22,7 +22,11 @@
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+<<<<<<< HEAD
     <talend.job.id>_ISY7gJgLEe6DXooC18dazA</talend.job.id>
+=======
+    <talend.job.id>_kRG8cJhIEe6tRczGY63UDg</talend.job.id>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
     <talend.routine.groupid>org.example.acmeflyingusecase.code</talend.routine.groupid>
@@ -109,6 +113,7 @@
       </exclusions>
     </dependency>
     <dependency>
+<<<<<<< HEAD
       <groupId>com.oracle.ojdbc</groupId>
       <artifactId>ojdbc8</artifactId>
       <version>19.3.0.0</version>
@@ -131,6 +136,8 @@
       </exclusions>
     </dependency>
     <dependency>
+=======
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.29</version>
@@ -142,6 +149,7 @@
       </exclusions>
     </dependency>
     <dependency>
+<<<<<<< HEAD
       <groupId>org.talend.libraries</groupId>
       <artifactId>talend-oracle-timestamptz</artifactId>
       <version>6.0.0</version>
@@ -153,6 +161,8 @@
       </exclusions>
     </dependency>
     <dependency>
+=======
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
       <groupId>org.example.acmeflyingusecase.code</groupId>
       <artifactId>routines</artifactId>
       <version>8.0.1</version>

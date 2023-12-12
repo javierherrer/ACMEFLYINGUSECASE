@@ -21,8 +21,13 @@
     <talend.job.path>acmeflyingusecase</talend.job.path>
     <project.distribution-management.repository.id>${project.distributionManagement.repository.id}</project.distribution-management.repository.id>
     <talend.job.stat>true</talend.job.stat>
+<<<<<<< HEAD
     <talend.job.jvmargs>-Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
     <talend.job.id>_jI3wAJLMEe6mQpb2dyFAqA</talend.job.id>
+=======
+    <talend.job.jvmargs>-Xmx2048m -Xms256M -Xmx1024M -Dfile.encoding=UTF-8 </talend.job.jvmargs>
+    <talend.job.id>_xTTUgJXkEe6OsJjb7CGyzQ</talend.job.id>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
     <talend.job.version>0.1</talend.job.version>
     <talend.job.framework></talend.job.framework>
     <talend.routine.groupid>org.example.acmeflyingusecase.code</talend.routine.groupid>
@@ -109,6 +114,31 @@
       </exclusions>
     </dependency>
     <dependency>
+<<<<<<< HEAD
+=======
+      <groupId>com.oracle.ojdbc</groupId>
+      <artifactId>ojdbc8</artifactId>
+      <version>19.3.0.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+      <groupId>org.postgresql</groupId>
+      <artifactId>postgresql</artifactId>
+      <version>42.2.14</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
       <groupId>org.slf4j</groupId>
       <artifactId>slf4j-api</artifactId>
       <version>1.7.29</version>
@@ -120,6 +150,20 @@
       </exclusions>
     </dependency>
     <dependency>
+<<<<<<< HEAD
+=======
+      <groupId>org.talend.libraries</groupId>
+      <artifactId>talend-oracle-timestamptz</artifactId>
+      <version>6.0.0</version>
+      <exclusions>
+        <exclusion>
+          <artifactId>*</artifactId>
+          <groupId>*</groupId>
+        </exclusion>
+      </exclusions>
+    </dependency>
+    <dependency>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
       <groupId>org.example.acmeflyingusecase.code</groupId>
       <artifactId>routines</artifactId>
       <version>8.0.1</version>

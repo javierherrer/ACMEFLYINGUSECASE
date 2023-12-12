@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.record="http:///orgomg/cwm/resource/record.ecore">
+  <TalendMetadata:DelimitedFileConnection xmi:id="_RFr_gZg_Ee6tRczGY63UDg" name="maintenance-personnel" dataPackage="_RFsmkJg_Ee6tRczGY63UDg" Server="Localhost 127.0.0.1" FilePath="/Users/maxtico/Documents/Master Data Science/DW/maintenance-personnel-airport-lookup.csv" Encoding="US-ASCII" FieldSeparatorValue="&quot;;&quot;" RowSeparatorValue="&quot;\n&quot;" UseHeader="true" HeaderValue="1" FirstLineCaption="true"/>
+  <orgomg.cwm.resource.record:RecordFile xmi:id="_RFsmkJg_Ee6tRczGY63UDg" name="default" dataManager="_RFr_gZg_Ee6tRczGY63UDg">
+    <ownedElement xsi:type="TalendMetadata:MetadataTable" xmi:id="_RFsmkZg_Ee6tRczGY63UDg" id="_7wfjkJg-Ee6tRczGY63UDg" label="maintenance">
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RFsmkpg_Ee6tRczGY63UDg" label="reporteurid" length="3" talendType="id_Integer" pattern="&quot;dd-MM-yyyy&quot;"/>
+      <feature xsi:type="TalendMetadata:MetadataColumn" xmi:id="_RFsmk5g_Ee6tRczGY63UDg" label="airport" length="3" talendType="id_String" pattern="&quot;dd-MM-yyyy&quot;"/>
+    </ownedElement>
+  </orgomg.cwm.resource.record:RecordFile>
+</xmi:XMI>

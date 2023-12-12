@@ -3,6 +3,13 @@
   <context confirmationNeeded="false" name="Default"/>
   <parameters>
     <elementParameter field="CLOSED_LIST" name="LOG4J_RUN_LEVEL" value="Info" show="false"/>
+<<<<<<< HEAD
+=======
+    <elementParameter field="TEXT" name="JOB_RUN_VM_ARGUMENTS" value="{&quot;JOB_RUN_VM_ARGUMENTS&quot;:[&quot;-Xmx2048m&quot;,&quot;-Xms256M&quot;,&quot;-Xmx1024M&quot;]}" show="false"/>
+    <elementParameter field="CHECK" name="JOB_RUN_VM_ARGUMENTS_OPTION" value="true" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_X" value="0" show="false"/>
+    <elementParameter field="TEXT" name="SCREEN_OFFSET_Y" value="0" show="false"/>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
     <elementParameter field="TEXT" name="REPOSITORY_CONNECTION_ID" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_PROPERTY_TYPENAME" value="" show="false"/>
     <elementParameter field="TEXT" name="OOZIE_HADOOP_DISTRIBUTION" value="" show="false"/>
@@ -41,7 +48,11 @@
     <elementParameter field="TEXT" name="PROPERTIES_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
+<<<<<<< HEAD
     <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:+3gjgRGPxGWABy07ifFtKu1CnCrXfcRV2ePnYtfF" show="false"/>
+=======
+    <elementParameter field="PASSWORD" name="PASS_IMPLICIT_CONTEXT" value="enc:system.encryption.key.v1:GtylPfowc5LPoKZY5hNwNfKHcJLg4aizuLuhY65M" show="false"/>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
     <elementParameter field="FILE" name="DBFILE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="DBTABLE_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="QUERY_CONDITION_IMPLICIT_CONTEXT" value="&quot;&quot;" show="false"/>
@@ -76,7 +87,11 @@
     <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;&quot;" show="false"/>
     <elementParameter field="TEXT" name="USER" value="&quot;&quot;" show="false"/>
+<<<<<<< HEAD
     <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:UhaWcMyXoo62r2aQvSZ7eSE85MM0r994O8y7eWaX" show="false"/>
+=======
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:zFSGNaFn4aoTKleHhFvET6i168lUC4e3khHc3TVE" show="false"/>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
     <elementParameter field="FILE" name="DBFILE" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_STATS" value="&quot;&quot;" show="false"/>
     <elementParameter field="DBTABLE" name="TABLE_LOGS" value="&quot;&quot;" show="false"/>
@@ -105,4 +120,349 @@
     <routinesParameter id="_yKfUgIiZEe6FztH2UosZ9Q" name="TalendStringUtil"/>
     <routinesParameter id="_yKdfUIiZEe6FztH2UosZ9Q" name="TalendString"/>
   </parameters>
+<<<<<<< HEAD
+=======
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="128" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_17ZaUIiZEe6FztH2UosZ9Q" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;postgresfib.fib.upc.edu&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;6433&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;AIMS&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;max.tico&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:ApFCOgHLBVGeslpyFkGkCKXSAANZZ44JqFqCeZfqQ5mP1tC2UQ4="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select &#xA;aircraftregistration as aircraftid, &#xA;scheduleddeparture::date as timeid,&#xA;(extract(epoch from (actualarrival - actualdeparture)) / 3600)::int as flightHours,&#xA;(extract(epoch from (actualdeparture- scheduleddeparture)) / 60)::int as Delayedminutes,&#xA;CASE WHEN cancelled THEN 1 ELSE 0 END as cancelled,&#xA;CASE WHEN delaycode IS NULL THEN 0 ELSE 1 END as delaycode,&#xA;CASE WHEN cancelled THEN 0 ELSE 1 END as not_cancelled&#xA;from Flights&#xA;where Flights.departureAirport = SUBSTRING(flightid FROM 8 FOR 3)&#xA;    AND Flights.arrivalAirport = SUBSTRING(flightid FROM 12 FOR 3)&#xA;&#x9;AND (extract(epoch from (actualarrival - actualdeparture)) / 3600)::int  &lt;=24&#xA;&#x9;AND actualarrival > actualdeparture&#xA;&#x9;AND scheduledarrival > scheduleddeparture&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="timeid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="flighthours"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="delayedminutes"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="cancelled"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="delaycode"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="not_cancelled"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Flights"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_1">
+      <column comment="" key="false" length="6" name="aircraftid" nullable="false" pattern="" precision="0" sourceType="BPCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="13" name="timeid" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="flighthours" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="delayedminutes" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="3" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="cancelled" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="delaycode" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="10" name="not_cancelled" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tPostgresqlInput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="160" posY="64">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_3" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_17ZaUIiZEe6FztH2UosZ9Q" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="V9_X"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;postgresfib.fib.upc.edu&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="POSTGRESQL" show="false"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;6433&quot;"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;AIMS&quot;"/>
+    <elementParameter field="TEXT" name="SCHEMA_DB" value="&quot;public&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;max.tico&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:saj7EimfXB//sybVwgicLhEAYWT8OI1cF+q9ypd0jpg3/Fos9CQ="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;&quot;"/>
+    <elementParameter field="QUERYSTORE_TYPE" name="QUERYSTORE" value="&quot;&quot;"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:REPOSITORY_QUERYSTORE_TYPE" value="" show="false"/>
+    <elementParameter field="TECHNICAL" name="QUERYSTORE:QUERYSTORE_TYPE" value="BUILT_IN"/>
+    <elementParameter field="GUESS_SCHEMA" name="GUESS_SCHEMA" value="&quot;&quot;"/>
+    <elementParameter field="MEMO_SQL" name="QUERY" value="&quot;select aircraftregistration as aircraftid,&#xA;scheduledarrival,&#xA;scheduleddeparture::date,&#xA;CASE WHEN programmed THEN (extract(epoch from (scheduledarrival- scheduleddeparture)) / 86400)::int ELSE 0 END as ADOSS,&#xA;CASE WHEN programmed THEN 0 ELSE (extract(epoch from (scheduledarrival- scheduleddeparture)) / 86400)::int END as ADOSSU&#xA;from Maintenance&#xA;where programmed=True&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="postgres_id" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="CHECK" name="USE_CURSOR" value="false"/>
+    <elementParameter field="TEXT" name="CURSOR_SIZE" value="1000" show="false"/>
+    <elementParameter field="CHECK" name="TRIM_ALL_COLUMN" value="false"/>
+    <elementParameter field="TABLE" name="TRIM_COLUMN">
+      <elementValue elementRef="SCHEMA_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="scheduledarrival"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="scheduleddeparture"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adoss"/>
+      <elementValue elementRef="TRIM" value="false"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adossu"/>
+      <elementValue elementRef="TRIM" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LABEL" value="Maintenance_scheduled"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBInput_3">
+      <column comment="" key="false" length="6" name="aircraftid" nullable="false" pattern="" precision="0" sourceType="BPCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="29" name="scheduledarrival" nullable="false" pattern="&quot;dd-MM-yyyy&quot;" precision="6" sourceType="TIMESTAMP" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="13" name="scheduleddeparture" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adoss" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adossu" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="2" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tJoin" componentVersion="0.101" offsetLabelX="0" offsetLabelY="0" posX="480" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tJoin_3" show="false"/>
+    <elementParameter field="CHECK" name="USE_LOOKUP_COLS" value="true"/>
+    <elementParameter field="TABLE" name="LOOKUP_COLS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="adoss"/>
+      <elementValue elementRef="LOOKUP_COLUMN" value="adoss"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="adossu"/>
+      <elementValue elementRef="LOOKUP_COLUMN" value="adossu"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="JOIN_KEY">
+      <elementValue elementRef="INPUT_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="LOOKUP_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="INPUT_COLUMN" value="timeid"/>
+      <elementValue elementRef="LOOKUP_COLUMN" value="scheduleddeparture"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_INNER_JOIN" value="false"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tJoin_3">
+      <column comment="" key="false" length="6" name="aircraftid" nullable="false" pattern="" precision="0" sourceType="BPCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="13" name="timeid" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="flighthours" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="delayedminutes" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="3" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Cancellations" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Delays" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="FlightCycles" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adoss" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adossu" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="2" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="6" name="aircraftid" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="13" name="timeid" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="flighthours" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="delayedminutes" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="3" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Cancellations" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Delays" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="FlightCycles" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adoss" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adossu" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tAggregateRow" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="320" posY="192">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tAggregateRow_2" show="false"/>
+    <elementParameter field="TABLE" name="GROUPBYS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="INPUT_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="timeid"/>
+      <elementValue elementRef="INPUT_COLUMN" value="timeid"/>
+    </elementParameter>
+    <elementParameter field="TABLE" name="OPERATIONS">
+      <elementValue elementRef="OUTPUT_COLUMN" value="Cancellations"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="cancelled"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="Delays"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="delaycode"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="FlightCycles"/>
+      <elementValue elementRef="FUNCTION" value="count"/>
+      <elementValue elementRef="INPUT_COLUMN" value="not_cancelled"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+      <elementValue elementRef="OUTPUT_COLUMN" value="flighthours"/>
+      <elementValue elementRef="FUNCTION" value="sum"/>
+      <elementValue elementRef="INPUT_COLUMN" value="flighthours"/>
+      <elementValue elementRef="IGNORE_NULL" value="false"/>
+    </elementParameter>
+    <elementParameter field="TEXT" name="LIST_DELIMITER" value="&quot;,&quot;"/>
+    <elementParameter field="CHECK" name="USE_FINANCIAL_PRECISION" value="true"/>
+    <elementParameter field="CHECK" name="CHECK_TYPE_OVERFLOW" value="false"/>
+    <elementParameter field="CHECK" name="CHECK_ULP" value="false"/>
+    <elementParameter field="TEXT" name="LABEL" value="Creating features"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tAggregateRow_2">
+      <column comment="" key="false" length="6" name="aircraftid" nullable="false" pattern="" precision="0" sourceType="BPCHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="false" length="13" name="timeid" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="flighthours" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="delayedminutes" nullable="true" pattern="" precision="0" sourceType="INT4" type="id_Integer" originalLength="3" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Cancellations" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Delays" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="FlightCycles" nullable="true" pattern="" precision="-1" sourceType="" type="id_Integer" originalLength="2" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <node componentName="tOracleOutput" componentVersion="0.102" offsetLabelX="0" offsetLabelY="0" posX="640" posY="128">
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBOutput_2" show="false"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:PROPERTY_TYPE" value="REPOSITORY"/>
+    <elementParameter field="TECHNICAL" name="PROPERTY:REPOSITORY_PROPERTY_TYPE" value="_5DE80IySEe6XyvTEjdUXMQ" show="false"/>
+    <elementParameter field="CHECK" name="USE_EXISTING_CONNECTION" value="false"/>
+    <elementParameter field="COMPONENT_LIST" name="CONNECTION" value="" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="CONNECTION_TYPE" value="ORACLE_SERVICE_NAME"/>
+    <elementParameter field="CLOSED_LIST" name="DB_VERSION" value="ORACLE_18"/>
+    <elementParameter field="TEXT" name="RAC_URL" value="&quot;oraclefib.fib.upc.edu&quot;" show="false"/>
+    <elementParameter field="TEXT" name="HOST" value="&quot;oraclefib.fib.upc.edu&quot;"/>
+    <elementParameter field="TEXT" name="PORT" value="&quot;1521&quot;"/>
+    <elementParameter field="TEXT" name="TYPE" value="ORACLE_SERVICE_NAME" show="false"/>
+    <elementParameter field="TEXT" name="DBNAME" value="&quot;orabd&quot;"/>
+    <elementParameter field="TEXT" name="LOCAL_SERVICE_NAME" value="&quot;orabd&quot;" show="false"/>
+    <elementParameter field="TEXT" name="TABLESCHEMA" value="&quot;\&quot;JAVIER.HERRER.TORRES\&quot;&quot;"/>
+    <elementParameter field="TEXT" name="USER" value="&quot;javier.herrer.torres&quot;"/>
+    <elementParameter field="PASSWORD" name="PASS" value="enc:system.encryption.key.v1:Qx0A4eg1YCBJoTBXcceqSCo1EedbWgrA8R8fap06Zf9h/Q48Ujg="/>
+    <elementParameter field="DBTABLE" name="TABLE" value="&quot;Aircraft_utilization&quot;"/>
+    <elementParameter field="CLOSED_LIST" name="TABLE_ACTION" value="DROP_CREATE"/>
+    <elementParameter field="LABEL" name="NOTE" value="Warning : this component configuration will automatically generate a commit before data insert/update/delete" show="false"/>
+    <elementParameter field="CLOSED_LIST" name="DATA_ACTION" value="INSERT_OR_UPDATE"/>
+    <elementParameter field="LABEL" name="NOTE" value="This option only applies when deploying and running in the Talend Runtime"/>
+    <elementParameter field="CHECK" name="SPECIFY_DATASOURCE_ALIAS" value="false"/>
+    <elementParameter field="TEXT" name="DATASOURCE_ALIAS" value="&quot;&quot;" show="false"/>
+    <elementParameter field="CHECK" name="DIE_ON_ERROR" value="false"/>
+    <elementParameter field="MAPPING_TYPE" name="MAPPING" value="oracle_id" show="false"/>
+    <elementParameter field="TEXT" name="JDBC_URL" value="&quot;jdbc:oracle:oci:/@talend&quot;" show="false"/>
+    <elementParameter field="TEXT" name="PROPERTIES" value="&quot;&quot;"/>
+    <elementParameter field="LABEL" name="NOTE" value="*Note: Example for Additional JDBC Parameters: &quot;parameterName1=value1&amp;&amp;parameterName2=value2&quot;"/>
+    <elementParameter field="CHECK" name="USE_ALTERNATE_SCHEMA" value="false" show="false"/>
+    <elementParameter field="TEXT" name="ALTERNATE_SCHEMA" value="&quot;&quot;" show="false"/>
+    <elementParameter field="ENCODING_TYPE" name="ENCODING" value="&quot;ISO-8859-15&quot;" show="false"/>
+    <elementParameter field="TECHNICAL" name="ENCODING:ENCODING_TYPE" value="ISO-8859-15"/>
+    <elementParameter field="TEXT" name="COMMIT_EVERY" value="10000"/>
+    <elementParameter field="TABLE" name="ADD_COLS"/>
+    <elementParameter field="CHECK" name="USE_FIELD_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="FIELD_OPTIONS" show="false">
+      <elementValue elementRef="SCHEMA_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="timeid"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="flighthours"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="delayedminutes"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Cancellations"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="Delays"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="FlightCycles"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adoss"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+      <elementValue elementRef="SCHEMA_COLUMN" value="adossu"/>
+      <elementValue elementRef="UPDATE_KEY" value="false"/>
+      <elementValue elementRef="DELETE_KEY" value="false"/>
+      <elementValue elementRef="UPDATABLE" value="true"/>
+      <elementValue elementRef="INSERTABLE" value="true"/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="USE_HINT_OPTIONS" value="false"/>
+    <elementParameter field="TABLE" name="HINT_OPTIONS" show="false"/>
+    <elementParameter field="CHECK" name="CONVERT_COLUMN_TABLE_TO_UPPERCASE" value="false"/>
+    <elementParameter field="CHECK" name="CONTAIN_BLOB_FROM_OTHER_DB" value="false"/>
+    <elementParameter field="CHECK" name="ENABLE_DEBUG_MODE" value="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_SIZE" value="true" show="false"/>
+    <elementParameter field="CHECK" name="USE_BATCH_AND_USE_CONN" value="false" show="false"/>
+    <elementParameter field="TEXT" name="BATCH_SIZE" value="10000" show="false"/>
+    <elementParameter field="CHECK" name="SUPPORT_NULL_WHERE" value="false"/>
+    <elementParameter field="CHECK" name="USE_TIMESTAMP_FOR_DATE_TYPE" value="true"/>
+    <elementParameter field="CHECK" name="TRIM_CHAR" value="true"/>
+    <elementParameter field="TEXT" name="LABEL" value="Aircraft_utilization"/>
+    <elementParameter field="TEXT" name="CONNECTION_FORMAT" value="row"/>
+    <metadata connector="FLOW" name="tDBOutput_2">
+      <column comment="" key="true" length="6" name="aircraftid" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="13" name="timeid" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="flighthours" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="delayedminutes" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="3" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Cancellations" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Delays" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="FlightCycles" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adoss" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adossu" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+    </metadata>
+    <metadata connector="REJECT" name="REJECT">
+      <column comment="" key="true" length="6" name="aircraftid" nullable="false" pattern="" precision="0" sourceType="CHAR" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column comment="" key="true" length="13" name="timeid" nullable="true" pattern="&quot;dd-MM-yyyy&quot;" precision="0" sourceType="DATE" type="id_Date" originalLength="-1" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="flighthours" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="3" name="delayedminutes" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="3" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Cancellations" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="Delays" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" key="false" length="2" name="FlightCycles" nullable="true" pattern="" precision="-1" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adoss" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column comment="" defaultValue="" key="false" length="2" name="adossu" nullable="true" pattern="" precision="0" sourceType="NUMBER" type="id_Integer" originalLength="2" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorCode" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+      <column defaultValue="" key="false" length="255" name="errorMessage" nullable="true" precision="0" sourceType="VARCHAR2" type="id_String" originalLength="-1" usefulColumn="true"/>
+    </metadata>
+  </node>
+  <connection connectorName="FLOW" label="row1" lineStyle="0" metaname="tDBInput_1" offsetLabelX="0" offsetLabelY="0" source="tDBInput_1" target="tAggregateRow_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row1" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row6" lineStyle="8" metaname="tDBInput_3" offsetLabelX="0" offsetLabelY="0" source="tDBInput_3" target="tJoin_3">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row6" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row9" lineStyle="0" metaname="tJoin_3" offsetLabelX="0" offsetLabelY="0" source="tJoin_3" target="tDBOutput_2">
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row9" show="false"/>
+  </connection>
+  <connection connectorName="FLOW" label="row8" lineStyle="0" metaname="tAggregateRow_2" offsetLabelX="0" offsetLabelY="0" source="tAggregateRow_2" target="tJoin_3">
+    <elementParameter field="TABLE" name="TRACES_CONNECTION_FILTER" show="false">
+      <elementValue elementRef="TRACE_COLUMN" value="aircraftid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+      <elementValue elementRef="TRACE_COLUMN" value="timeid"/>
+      <elementValue elementRef="TRACE_COLUMN_CHECKED" value="true"/>
+      <elementValue elementRef="TRACE_COLUMN_CONDITION" value=""/>
+    </elementParameter>
+    <elementParameter field="CHECK" name="MONITOR_CONNECTION" value="false"/>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="row8" show="false"/>
+  </connection>
+  <subjob>
+    <elementParameter field="TEXT" name="UNIQUE_NAME" value="tDBInput_1" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_TITLE_COLOR" value="92;131;150" show="false"/>
+    <elementParameter field="COLOR" name="SUBJOB_COLOR" value="207;226;236"/>
+  </subjob>
+>>>>>>> 72521be (feat: aircraft utilization, people&temporal dim)
 </talendfile:ProcessType>

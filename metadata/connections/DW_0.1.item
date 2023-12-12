@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xmi:XMI xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:TalendMetadata="http://www.talend.org/metadata/connection/2010" xmlns:orgomg.cwm.resource.relational="http:///orgomg/cwm/resource/relational.ecore">
+  <TalendMetadata:DatabaseConnection xmi:id="_4K6VQJhEEe6tRczGY63UDg" name="DW" id="__AdtQJhDEe6tRczGY63UDg" label="DW" dataPackage="_TQCEQJhMEe6rodu_hKPEEA" DatabaseType="Oracle with service name" DriverClass="oracle.jdbc.OracleDriver" URL="jdbc:oracle:thin:@(description=(address=(protocol=tcp)(host=oraclefib.fib.upc.edu)(port=1521))(connect_data=(service_name=orabd)))" dbVersionString="ORACLE_18" Port="1521" Username="max.tico" Password="enc:system.encryption.key.v1:2DIvXSrHbk0a84C0tjn5PT4RYoe21y2N8aHs56YokDx76gHj" ServerName="oraclefib.fib.upc.edu" DatasourceName="" FileFieldName="" SID="orabd" SqlSynthax="" StringQuote="" NullChar="" DbmsId="oracle_id" ProductId="ORACLE" AdditionalParams="" StandardSQL="true" SQLMode="false" UiSchema="\&quot;MAX.TICO\&quot;">
+    <taggedValue xmi:id="_4K6VQZhEEe6tRczGY63UDg" tag="Is Conn Need Reload" value="true"/>
+    <taggedValue xmi:id="_4LAb4JhEEe6tRczGY63UDg" tag="package filter" value=""/>
+    <taggedValue xmi:id="_4LAb4ZhEEe6tRczGY63UDg" tag="Status" value=""/>
+    <taggedValue xmi:id="_4LAb4phEEe6tRczGY63UDg" tag="Version" value="0.1"/>
+    <taggedValue xmi:id="_4LAb45hEEe6tRczGY63UDg" tag="Purpose" value=""/>
+    <taggedValue xmi:id="_4LAb5JhEEe6tRczGY63UDg" tag="Description" value=""/>
+    <taggedValue xmi:id="_4LAb5ZhEEe6tRczGY63UDg" tag="Author" value=""/>
+    <taggedValue xmi:id="_4LAb5phEEe6tRczGY63UDg" tag="otherParameter"/>
+    <taggedValue xmi:id="_4TfpgJhEEe6tRczGY63UDg" tag="DB ProductName" value="Oracle"/>
+    <taggedValue xmi:id="_4TfpgZhEEe6tRczGY63UDg" tag="DB ProductVersion" value="Oracle Database 12c Enterprise Edition Release 12.1.0.2.0 - 64bit Production&#xA;With the Partitioning, OLAP, Advanced Analytics and Real Application Testing options"/>
+    <taggedValue xmi:id="_4TfpgphEEe6tRczGY63UDg" tag="DB IdentifierQuoteString" value="&quot;"/>
+    <parameters xmi:id="_4K6VQphEEe6tRczGY63UDg" key="CONN_PARA_KEY_USERNAME" value="max.tico"/>
+    <parameters xmi:id="_KcGJcJhMEe6rodu_hKPEEA" key="CONN_PARA_KEY_MAPRDB_TABLE_NS_MAPPING" value=""/>
+  </TalendMetadata:DatabaseConnection>
+  <orgomg.cwm.resource.relational:Schema xmi:id="_TQCEQJhMEe6rodu_hKPEEA" name="\&quot;MAX.TICO\&quot;" dataManager="_4K6VQJhEEe6tRczGY63UDg"/>
+</xmi:XMI>
